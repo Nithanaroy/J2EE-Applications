@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database Connection Settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/login_form</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password" />
+
+		<!-- Database with J2EE Dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<!-- JDBC pool size -->
+		<property name="hibernate.connection.pool_size">5</property>
+
+		<mapping class="com.dcandan.model.user" />
+	</session-factory>
+</hibernate-configuration>
